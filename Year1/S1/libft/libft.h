@@ -6,5 +6,7 @@
 size_t	ft_strlen(const char *str);
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
 
 #endif

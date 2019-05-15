@@ -1,4 +1,4 @@
-#include "ftlib.h"
+#include "libft.h"
 
 // I don't think this handles src being < len char long
 // Also needs to handle not terminating the dst if no space in *dst

@@ -28,5 +28,7 @@ void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 char    *ft_strdup(const char *s1);
 int     ft_atoi(const char *str);
+void    ft_putendl(char const *s);
+void    ft_putendl_fd(char const *s, int fd);
 
 #endif

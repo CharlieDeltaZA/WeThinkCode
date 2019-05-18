@@ -27,5 +27,6 @@ int     ft_isprint(int c);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 char    *ft_strdup(const char *s1);
+int     ft_atoi(const char *str);
 
 #endif

@@ -22,5 +22,7 @@ int     ft_isdigit(int c);
 int     ft_isalnum(int c);
 int     ft_isascii(int c);
 int     ft_isprint(int c);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

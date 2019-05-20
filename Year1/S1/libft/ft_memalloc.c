@@ -2,5 +2,11 @@
 
 void	*ft_memalloc(size_t size)
 {
-	//TODO
+	void *ptr;
+
+	ptr = malloc(size);
+	if (ptr == NULL)
+		return (NULL);
+	else
+		return (ptr);
 }

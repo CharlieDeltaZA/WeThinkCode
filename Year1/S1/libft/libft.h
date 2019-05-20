@@ -30,5 +30,11 @@ char    *ft_strdup(const char *s1);
 int     ft_atoi(const char *str);
 void    ft_putendl(char const *s);
 void    ft_putendl_fd(char const *s, int fd);
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char    *ft_strchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif

@@ -13,9 +13,10 @@ char	*ft_strnew(size_t size)
 	{
 		while (i <= size)
 		{
-			str[i] = '\0';
+			ptr[i] = '\0';
 			i++;
 		}
-		str[i] = '\0';
+		ptr[i] = '\0';
 		return (ptr);
+	}
 }

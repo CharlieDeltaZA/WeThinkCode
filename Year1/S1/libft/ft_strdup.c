@@ -7,7 +7,7 @@ char	*ft_strdup(const char *s1)
 	char *dup;
 
 	i = ft_strlen(s1);
-	dup = (char*)malloc(sizeof(*dup) * (i + 1));
+	dup = (char*)malloc(sizeof(char) * (i + 1));
 	k = 0;
 	while (k < i)
 	{

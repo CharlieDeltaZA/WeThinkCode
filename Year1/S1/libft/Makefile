@@ -3,13 +3,14 @@ NAME = libft.a
 FLAGS = -Wall -Werror -Wextra
 OBJ = *.o
 SRC = *.c
-OPTIONS = -c
+OPTIONS = -c -I.
 
 all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) $(OPTIONS) $(SRC)
 	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -f $(OBJ)

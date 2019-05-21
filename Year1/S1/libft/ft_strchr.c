@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:39:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:39:13 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/21 13:54:15 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	//TODO
+	char	*ret;
+	int		i;
+
+	i = 0;
+	ret = NULL;
+	while (s[i] != c)
+		i++;
+	if (s[i] == c)
+		ret = &s[i];
+	return ((char*)ret);
 }

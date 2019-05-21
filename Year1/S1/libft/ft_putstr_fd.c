@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:35:32 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:35:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/21 15:12:08 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_putstr_fd(char const *s, int fd)
 
 	i = 0;
 	while (s[i] != '\0')
-		{
-			ft_putchar_fd(s[i], fd);
-			i++;
-		}
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }

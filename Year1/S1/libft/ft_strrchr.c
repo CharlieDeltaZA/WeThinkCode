@@ -6,24 +6,21 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:45:41 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 15:11:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/22 10:01:57 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// this works but doesn't return null when the char doesn't exist
-
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t		i;
+	int		i;
 
-	i = ft_strlen(s);
-	i += 1;
-	while (s[i] != c)
+	i = (ft_strlen(s) + 1);
+	while (s[i] != c && i >= 0)
 		i--;
-	if (s[i] == c)
-		return ((char*)&s[i]);
-	else
+	if (!(s[i] == c))
 		return (NULL);
+	else
+		return ((char*)&s[i]);
 }

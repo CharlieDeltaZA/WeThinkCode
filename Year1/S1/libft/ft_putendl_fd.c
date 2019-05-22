@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:36:02 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/22 10:13:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	//TODO
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

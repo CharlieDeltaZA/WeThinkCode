@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:32:05 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:32:06 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/23 15:34:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,7 @@
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	//TODO
+	
+	if (ft_strlen(s1) == 0 && ft_strlen(s2) == 0)
+		return (0);
 }

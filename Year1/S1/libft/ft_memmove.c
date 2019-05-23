@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:32:29 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:32:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/23 15:35:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	//TODO
+	return (dst);
 }

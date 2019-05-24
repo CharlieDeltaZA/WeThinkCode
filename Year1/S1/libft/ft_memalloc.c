@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:31:36 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:31:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/24 13:22:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,8 @@ void	*ft_memalloc(size_t size)
 	if (ptr == NULL)
 		return (NULL);
 	else
+	{
+		ft_memset(ptr, '\0', size);
 		return (ptr);
+	}
 }

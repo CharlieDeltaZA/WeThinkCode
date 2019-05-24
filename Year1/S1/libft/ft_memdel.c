@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:32:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:32:24 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/24 13:16:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	ft_memdel(void **ap)
 {
-	void *ptr;
-
-	ptr = *ap;
-	free(ptr);
-	**ap = NULL;
+	if (ap == NULL)
+		return ;
+	else
+	{	
+		free(*ap);
+		*ap = NULL;
+	}
 }

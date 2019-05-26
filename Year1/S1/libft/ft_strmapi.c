@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:44:52 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/26 20:54:26 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/26 20:56:20 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	//TODO
 	unsigned int	i;
 	char		*str;
 

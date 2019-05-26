@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:44:48 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:44:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/26 20:48:44 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,20 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	//TODO
+	char	*str;
+	int	i;
+
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	str = ft_strnew(ft_strlen(s));
+	if (str == NULL)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		str[i] = f(s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

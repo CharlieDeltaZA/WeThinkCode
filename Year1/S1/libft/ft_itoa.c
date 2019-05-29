@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:31:17 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 13:23:39 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/29 14:02:19 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,21 @@ static int	is_neg(int n)
 	return (i);
 }
 
+static char	*check_min(char *minint)
+{
+	int		i;
+	char	*min;
+
+	i = 0;
+	min = ft_strnew(11);
+	while (i < 11)
+	{
+		min[i] = minint[i];
+		i++;
+	}
+	return (min);
+}
+
 char		*ft_itoa(int n)
 {
 	int		len;
@@ -29,6 +44,8 @@ char		*ft_itoa(int n)
 	int		i;
 	char	*num;
 
+	if (n == -2147483648)
+		return (check_min(MININT));
 	len = ft_intlen(n);
 	neg = is_neg(n);
 	i = len;

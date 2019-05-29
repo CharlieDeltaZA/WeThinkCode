@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 10:55:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/29 13:49:48 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# define MININT "-2147483648"
 
 size_t				ft_strlen(const char *str);
 void				ft_putchar(char c);

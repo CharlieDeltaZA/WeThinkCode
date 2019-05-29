@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:45:12 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 15:09:57 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/29 13:14:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnew(size_t size)
 		return (NULL);
 	else
 	{
-		while (i <= size)
+		while (i < size)
 		{
 			ptr[i] = '\0';
 			i++;

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 09:17:35 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/29 10:55:12 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int					ft_isprint(int c);
 int					ft_intlen(int n);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
+char				*ft_strrev(char *str);
 char				*ft_strdup(const char *s1);
 int					ft_atoi(const char *str);
 void				ft_putendl(char const *s);

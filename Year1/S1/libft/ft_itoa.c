@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:31:17 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 10:40:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/29 11:24:05 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char		*ft_itoa(int n)
 	int		neg;
 	int		i;
 	char	*num;
+	char	*res;
 
 	len = ft_intlen(n);
 	neg = is_neg(n);
@@ -37,8 +38,16 @@ char		*ft_itoa(int n)
 		return (NULL);
 	if (neg == 1)
 	{
-		str[i] == '-';
+		num[len] = '-';
+		n = n * -1;
 		i++;
 	}
-	
+	while (n != 0)
+	{
+		num[i] = (n % 10) + '0';
+		n = n / 10;
+		i++;
+	}
+	res = ft_strrev(num);
+	return (res);
 }

@@ -11,6 +11,7 @@ SRC = ft_atoi.c \
 		ft_isdigit.c \
 		ft_islower.c \
 		ft_isupper.c \
+		ft_iswhitespace.c \
 		ft_isprint.c \
 		ft_itoa.c \
 		ft_memalloc.c \

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:44:48 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/27 08:29:04 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/30 15:49:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	str = ft_strnew(ft_strlen(s));
-	if (str == NULL)
+	if (!(str = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	while (s[i] != '\0')
 	{

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 13:49:48 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/30 11:39:37 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 
 # define MININT "-2147483648"
+# define TRUE 1
+# define FALSE 0
 
 size_t				ft_strlen(const char *str);
 void				ft_putchar(char c);
@@ -35,6 +37,7 @@ int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
+int					ft_iswhitespace(char c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);

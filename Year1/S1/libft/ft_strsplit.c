@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:19:37 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/30 11:14:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/30 11:59:09 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,17 @@ static int	count_words(char const *s, char d)
 
 	i = 0;
 	count = 0;
-	while (s[i + 1] != '\0')
+	while (s[i] == d)
+		i++;
+	else
 	{
-		if (s[i] == d && s[i + 1] != d && s[i] != '\0')
-		{
-			i++;
-			count++;
-		}
-		else
+		count++;
+		while (!(ft_iswhitespace(s[i]) && s[i] && s[i] != d))
 			i++;
 	}
-	if (s[i] == '\0')
-		count = 1;
+
+//	if (s[i] == '\0')
+//		count = 1;
 	return (count);
 }
 // this needs an index starting at the first char that isn't a delim

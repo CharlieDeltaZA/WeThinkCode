@@ -6,17 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:19:37 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/30 15:15:20 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/30 15:35:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
- * Count doesn't work if string doesn't start with a delim > Recursion, Thanks Cameron
- * Need to code a sub-string length func > DONE
- * Need to code the core of the main func
-*/ 
 
 static int	count_words(char const *str, char delim, int index)
 {
@@ -35,7 +29,6 @@ static int	count_words(char const *str, char delim, int index)
 	return (count + count_words(str, delim, index));
 }
 
-// this needs an index starting at the first char that isn't a delim
 static int	str_len(char const *str, char delim, int index)
 {
 	int		len;
@@ -53,21 +46,18 @@ static int	str_len(char const *str, char delim, int index)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	//TODO
 	int		i;
 	int		j;
 	char	**array;
-	int		wcount;
 	int		k;
 
-	if (!s || !c) //can I do that?!?!?!
+	if (!s || !c)
 		return (NULL);
-	wcount = count_words(s, c, 0);
-	if (!(array = (char**)malloc(sizeof(*array) * wcount + 1)))
+	if (!(array = (char**)malloc(sizeof(*array) * (count_words(s, c, 0) + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (i++ < wcount)
+	while (i < count_words(s, c, 0))
 	{
 		k = 0;
 		if (!(array[i] = ft_strnew(str_len(s, c, j))))
@@ -77,7 +67,8 @@ char		**ft_strsplit(char const *s, char c)
 		while (s[j] != c && s[j])
 			array[i][k++] = s[j++];
 		array[i][k] = '\0';
-	}	
+		i++;
+	}
 	array[i] = 0;
 	return (array);
 }

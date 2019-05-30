@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:45:12 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 13:14:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/30 20:42:52 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 
 	i = 0;
-	ptr = (char*)malloc(sizeof(*ptr) * (size + 1));
-	if (ptr == NULL)
+	if (!(ptr = (char*)malloc(sizeof(*ptr) * (size + 1))))
 		return (NULL);
 	else
 	{

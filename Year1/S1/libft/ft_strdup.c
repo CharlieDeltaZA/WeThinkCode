@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:41:16 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/23 10:18:55 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/30 20:40:58 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ char	*ft_strdup(const char *s1)
 	char	*dup;
 
 	i = ft_strlen(s1);
-	dup = (char*)malloc(sizeof(char) * (i + 1));
-	if (dup == NULL)
+	if (!(dup = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	k = 0;
 	while (k < i)

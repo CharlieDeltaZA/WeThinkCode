@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/31 08:32:17 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/31 08:56:35 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ typedef struct		s_list
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_iswhitespace(char c);
+int					ft_isspace(int c);
 int					ft_intlen(int n);
 char				*ft_strrev(char *str);
 

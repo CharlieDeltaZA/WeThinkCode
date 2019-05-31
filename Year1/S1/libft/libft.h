@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/31 08:56:35 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/05/31 11:38:46 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ int					ft_iswhitespace(char c);
 int					ft_isspace(int c);
 int					ft_intlen(int n);
 char				*ft_strrev(char *str);
+char				*ft_strndup(const char *s1, size_t n);
 
 
 #endif

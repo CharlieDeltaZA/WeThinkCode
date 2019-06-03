@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 09:56:24 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/03 15:56:36 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/03 15:57:06 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		if (!(list->content = malloc(content_size)))
 			return (NULL);
-		//list->content = (void*)content;
 		ft_memcpy(list->content, content, content_size);
 		list->content_size = content_size;
 	}

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:05:14 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/03 10:06:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/04 13:52:37 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,20 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	//TODO
+	t_list	*new_list;
+	t_list	*nl_head;
+
+	if (lst == NULL || f == NULL)
+		return (NULL);
+	if (!(new_list = ft_lstnew(NULL, 0)))
+		return (NULL);
+	new_list = f(lst);
+	nl_head = new_list;
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+		new_list->next = f(lst);
+		new_list = new_list->next;
+	}
+	return (nl_head);
 }

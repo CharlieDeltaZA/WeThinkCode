@@ -64,6 +64,7 @@ SRC = ft_atoi.c \
 		ft_toupper.c \
 		ft_lstnew.c \
 		ft_lstdel.c \
+		ft_lstadd.c \
 		ft_lstdelone.c
 
 all: $(NAME)

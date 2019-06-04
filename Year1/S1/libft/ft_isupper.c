@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:30:15 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:30:19 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/04 14:25:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (42);
+		return (TRUE);
 	else
-		return (0);
+		return (FALSE);
 }

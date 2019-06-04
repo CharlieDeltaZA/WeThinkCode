@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:29:41 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:29:44 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/04 14:25:05 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (42);
+		return (TRUE);
 	else
-		return (0);
+		return (FALSE);
 }

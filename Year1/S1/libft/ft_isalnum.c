@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:26:14 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:26:19 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/04 14:26:31 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isalnum(int c)
 {
-	if ((ft_isalpha(c) == 42) || (ft_isdigit(c) == 42))
-		return (42);
+	if ((ft_isalpha(c) == TRUE) || (ft_isdigit(c) == TRUE))
+		return (TRUE);
 	else
-		return (0);
+		return (FALSE);
 }

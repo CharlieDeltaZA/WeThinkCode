@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:27:40 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/21 09:27:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/04 14:24:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (42);
+		return (TRUE);
 	else
-		return (0);
+		return (FALSE);
 }

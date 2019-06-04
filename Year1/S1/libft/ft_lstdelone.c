@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 09:59:03 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/03 16:43:31 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/04 08:49:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 	list = *alst;
 	del(list->content, list->content_size);
 	free(list);
-	*alst  = NULL;
+	*alst = NULL;
 }

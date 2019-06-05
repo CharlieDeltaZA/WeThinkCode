@@ -6,9 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:31:58 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/24 08:44:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 11:23:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Locates first occurrence of `c` (converted to unsigned char) in string `s`
+** Returns pointer to byte located, or NULL if no such byte exists within
+** `n` bytes.
+*/
 
 #include "libft.h"
 

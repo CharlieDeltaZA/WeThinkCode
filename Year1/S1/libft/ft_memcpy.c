@@ -6,9 +6,14 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:31:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/23 14:08:18 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 11:12:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Copies `n` bytes from memory area `src` to memory area `dst`
+** Returns original value of `dst`
+*/
 
 #include "libft.h"
 

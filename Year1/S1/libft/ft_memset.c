@@ -6,9 +6,14 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:32:35 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/23 13:27:54 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 11:13:19 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Writes `len` bytes of value `c` (converted to unsigned char) to string `b`
+** Returns string `b`, in this case, `str`
+*/
 
 #include "libft.h"
 

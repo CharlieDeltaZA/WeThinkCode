@@ -6,11 +6,18 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:19:37 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/30 15:35:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 16:55:49 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Helper function for ft_strsplit.
+** Recursively counts the number of words in the string `str`, words found
+** between delimiters `delim`.
+** Returns word count `count`.
+*/
 
 static int	count_words(char const *str, char delim, int index)
 {
@@ -29,6 +36,12 @@ static int	count_words(char const *str, char delim, int index)
 	return (count + count_words(str, delim, index));
 }
 
+/*
+** Helper function for ft_strsplit.
+** Determines the length of each word found in string `str`.
+** Returns word length `len`.
+*/
+
 static int	str_len(char const *str, char delim, int index)
 {
 	int		len;
@@ -43,6 +56,12 @@ static int	str_len(char const *str, char delim, int index)
 	}
 	return (len);
 }
+
+/*
+** Allocates a fresh array of strings (all ending with '\0', including the
+** array) obtained by splitting `s` using character `c` as a delimiter.
+** Returns the array of strings, or NULL if allocation fails.
+*/
 
 char		**ft_strsplit(char const *s, char c)
 {

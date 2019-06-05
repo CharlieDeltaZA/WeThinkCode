@@ -6,11 +6,16 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:17:27 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/28 09:11:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 16:46:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Helper function for ft_strtrim.
+** Determines if current character is white space, and iterates over it.
+*/
 
 static int	is_white_space(char const *s)
 {
@@ -21,6 +26,12 @@ static int	is_white_space(char const *s)
 		j++;
 	return (j);
 }
+
+/*
+** Allocates a copy of string `s` without whitespace at the beginning or end.
+** Whitespace = {space, new-line, tab}.
+** Returns `str` after removal of whitespace, or NULL if allocation fails.
+*/
 
 char		*ft_strtrim(char const *s)
 {

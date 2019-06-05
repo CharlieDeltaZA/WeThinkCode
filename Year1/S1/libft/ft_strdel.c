@@ -6,9 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:41:11 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/24 13:00:55 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 15:51:19 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Frees a string pointed to by `*as`, before setting that pointer to NULL.
+*/
 
 #include "libft.h"
 

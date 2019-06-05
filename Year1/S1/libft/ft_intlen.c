@@ -6,9 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 08:57:43 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 14:24:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:02:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Calculates the length of the int passed.
+*/
 
 #include "libft.h"
 

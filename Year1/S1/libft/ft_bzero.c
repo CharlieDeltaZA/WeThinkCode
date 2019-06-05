@@ -6,9 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:25:33 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/23 13:35:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:41:51 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Writes `n` zeroed bytes to string `s`, does nothing if `n` = 0
+*/
 
 #include "libft.h"
 

@@ -6,17 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:25:18 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/28 13:09:43 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:18:25 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**		if (res > 469762049 && neg == 1)
-**			return (-1);
-**		else if (res > 469762049 && neg == -1)
-**			return (0);
+** Converts an ascii character string into an int number, able to handle
+** positive or negative numbers.
 */
 
 int	ft_atoi(const char *str)

@@ -6,9 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:36:17 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/23 12:24:47 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 20:40:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Outputs integer `n` to the file descriptor `fd`. Uses ft_putchar_fd,
+** ft_putstr_fd, as well as recursively calling itself to print the integer to
+** the file descriptor.
+*/
 
 #include "libft.h"
 

@@ -6,9 +6,14 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:41:26 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/29 10:53:59 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 20:47:46 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Reverses the string passed as argument.
+** Returns the reversed string `str`.
+*/
 
 #include "libft.h"
 

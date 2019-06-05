@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-** Calculates the length of the int passed.
+** Calculates the length of the int passed as argument.
 */
 
 #include "libft.h"

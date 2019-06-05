@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-** Determines whether the character passed is a lower case letter or not.
+** Determines whether the character passed is a lower-case letter or not.
 */
 
 #include "libft.h"

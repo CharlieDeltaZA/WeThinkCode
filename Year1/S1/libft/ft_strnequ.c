@@ -6,9 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:41:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/28 11:55:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 16:19:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Lexicographical comparison of null-terminated strings `s1` and `s2`, up to
+** `n` characters or until '\0' is reached.
+** Returns 1 if strings are identical or 0 if not.
+*/
 
 #include "libft.h"
 

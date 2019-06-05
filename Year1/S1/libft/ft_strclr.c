@@ -6,9 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:39:21 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/24 13:14:05 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 15:54:19 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Sets every character of the string `s` to '\0'.
+*/
 
 #include "libft.h"
 

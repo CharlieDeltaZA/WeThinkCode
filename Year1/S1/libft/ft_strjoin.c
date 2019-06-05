@@ -6,9 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:44:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/27 10:14:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 16:28:44 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Allocates a new string ending with '\0', which is a result of the concaten-
+** tion of `s1` & `s2`.
+** Returns the result of the concatenation (`str`) or NULL if allocation fails.
+*/
 
 #include "libft.h"
 

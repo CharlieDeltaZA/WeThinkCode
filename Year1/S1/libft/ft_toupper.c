@@ -6,12 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:46:05 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/05 09:51:16 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 14:52:55 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Converts the character passed to upper case, if the character is lower case.
+** Converts a lower-case letter to corresponding upper-case letter.
+** Returns converted upper-case letter, or the original argument if unchanged.
 */
 
 #include "libft.h"

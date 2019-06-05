@@ -6,9 +6,16 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:44:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/24 15:42:25 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 12:49:51 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Appends `src` to end of `dst`. Appends at most (`dstsize` - strlen(`dst`)-1)
+** It will NUL-terminate unless `dstsize` == 0 or `dst` longer than `dstsize`.
+** Returns the total length of the string that was created (initial length of
+** `dst` + strlen(`src`))
+*/
 
 #include "libft.h"
 

@@ -6,9 +6,16 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:39:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/24 14:25:08 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 12:32:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Appends a copy of null-terminated string `s2` to the end of `s1` (also null-
+** terminated), and adds a terminating '\0'. `s1` must have enough space to
+** hold the end result.
+** Returns pointer to `s1`
+*/
 
 #include "libft.h"
 

@@ -6,9 +6,17 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:45:25 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/23 09:42:28 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 14:21:44 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Locates the first occurrence of null-terminated string `needle` in null-
+** terminated string `haystack`.
+** If `needle` is empty, `haystack` returned, if `needle` is not found in
+** `haystack`, NULL returned, otherwise a pointer to first character of the
+** first occurrence of `needle` is returned.
+*/
 
 #include "libft.h"
 

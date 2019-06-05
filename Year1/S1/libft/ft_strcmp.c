@@ -6,9 +6,16 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:39:30 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/04 14:37:33 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 14:41:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Lexicograpical comparison of the null-terminated strings `s1` & `s2`, as
+** unsigned characters.
+** Returns integer greater than, equal to, or less than 0 depending on whether
+** `s1` is greater than, equal to, or less than `s2`
+*/
 
 #include "libft.h"
 

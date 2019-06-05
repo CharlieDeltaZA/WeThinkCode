@@ -6,9 +6,16 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:21:53 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/05/31 11:40:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/05 12:38:16 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Allocates sufficient memory for a copy of `s1` and copies at most `n`
+** characters, always NUL terminating the copy.
+** Returns a pointer to the copy of `s1`, in this case, `dup`.
+** If memory allocation fails, NULL returned.
+*/
 
 #include "libft.h"
 

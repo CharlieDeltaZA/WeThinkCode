@@ -6,9 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:15 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/04 13:28:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/06 09:18:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Iterates through list `lst` and applies function `f` to each link.
+*/
 
 #include "libft.h"
 

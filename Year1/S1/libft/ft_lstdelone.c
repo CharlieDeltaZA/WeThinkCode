@@ -6,9 +6,14 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 09:59:03 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/04 08:49:26 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/06 08:59:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Takes a pointer to a link, and frees the link content with function `del`.
+** Also frees link memory with Free. Pointer to link finally set to NULL.
+*/
 
 #include "libft.h"
 

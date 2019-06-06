@@ -6,12 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 09:56:24 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/05 21:09:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/06 08:48:57 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocates a new link
+** Allocates a new link. Variables `content` & `content_size` initialized by
+** copy. `content` initialized to NULL if passed a NUL and `content_size`
+** initialized to 0. `next` initialized to NULL.
+** Returns a pointer to the new link, or NULL if allocation fails.
 */
 
 #include "libft.h"

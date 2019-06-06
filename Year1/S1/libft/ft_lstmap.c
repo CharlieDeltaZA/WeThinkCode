@@ -6,9 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:05:14 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/04 13:52:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/06 09:23:01 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Iterates list `lst` and applies function `f` to each link to create a new
+** fresh list.
+** Returns a pointer to the start of the new list, or NULL if allocation fails.
+*/
 
 #include "libft.h"
 

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/04 08:52:13 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/06 09:53:00 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 int					ft_islower(int c);
 int					ft_isupper(int c);
-int					ft_iswhitespace(char c);
 int					ft_isspace(int c);
 int					ft_intlen(int n);
 char				*ft_strrev(char *str);

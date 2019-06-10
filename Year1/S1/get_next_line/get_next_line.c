@@ -6,9 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:18:49 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/06 15:19:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/10 09:59:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "get_next_line.h"
 
 int		get_next_line(const int fd, char **line)
 {

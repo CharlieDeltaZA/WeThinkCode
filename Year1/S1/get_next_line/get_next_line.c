@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:18:49 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/11 12:48:05 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/11 14:04:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 static int	new_line(char **str,char **line, const int fd, int ret)
 {
 	char	*temp;
-	int		len;
+	size_t	len;
 
 	len = 0;
 	while (str[fd][len] != '\n'  && str[fd][len] != '\0')
@@ -50,4 +50,27 @@ static int	new_line(char **str,char **line, const int fd, int ret)
 int			get_next_line(const int fd, char **line)
 {
 	//TODO
+	int			ret;
+	char		*temp;
+	char		buff[BUFF_SIZE + 1];
+	static char	*str[1];
+
+	if (fd < 0 || line == NULL)
+		return (-1);
+	while ((ret = read(fd, buff, BUFF_SIZE)) > 0)
+	{
+		buff[ret] = '\0';
+		if (str[fd] == NULL)
+			str[fd] = ft_strnew(1);
+		temp = ft_strjoin(str[fd], buff);
+		free(str[fd]);
+		str[fd] = temp;
+		if (ft_strchr(buff, '\n'))
+			break ;
+	}
+	if (ret < 0)
+		return (-1);
+	else if (ret == 0 && (str[fd] == NULL || str[fd] == '\0'))
+		return (FALSE);
+	return (new_line(str, line, fd, ret));
 }

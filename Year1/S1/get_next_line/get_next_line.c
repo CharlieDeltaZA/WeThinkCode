@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:18:49 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/11 14:23:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/11 14:43:15 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 ** Comment Here
 */
 
-static int	new_line(char **str,char **line, const int fd, int ret)
+static int	new_line(char **str, char **line, const int fd, int ret)
 {
 	char	*temp;
 	size_t	len;
 
 	len = 0;
-	while (str[fd][len] != '\n'  && str[fd][len] != '\0')
+	while (str[fd][len] != '\n' && str[fd][len] != '\0')
 		len++;
 	if (str[fd][len] == '\n')
 	{
@@ -49,7 +49,6 @@ static int	new_line(char **str,char **line, const int fd, int ret)
 
 int			get_next_line(const int fd, char **line)
 {
-	//TODO
 	int			ret;
 	char		*temp;
 	char		buff[BUFF_SIZE + 1];

@@ -6,14 +6,18 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:18:49 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/13 10:30:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/13 12:14:19 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 /*
-** Comment Here
+** Appends single line to storage buffer `line`. We determine line length by
+** incrementing `len` until we find a '\n' or '\0'. If we find these chars we
+** assume we have a line, so we save that length of `str` to `line`, and store
+** the rest of `str` in a `temp` buffer. We free `str` and reassign it to the
+** contents of temp buffer to keep pos in `str`.
 */
 
 static int	new_line(char **str, char **line, const int fd, int ret)
@@ -44,7 +48,7 @@ static int	new_line(char **str, char **line, const int fd, int ret)
 }
 
 /*
-** Comment Here
+** 
 */
 
 int			get_next_line(const int fd, char **line)

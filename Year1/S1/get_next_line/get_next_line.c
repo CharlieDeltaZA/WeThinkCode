@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/18 12:57:39 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/18 13:10:05 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 // Read the fd with read()
 //
 
-static int	find_n(char *str)
+static size_t	find_n(char *str)
 {
 	size_t	i;
 
@@ -69,13 +69,20 @@ int			get_next_line(const int fd, char **line)
 				*line = ft_strdup(str);
 			}
 		}
-	}
 	if (ret < 0)
 		return (-1);
 	else if (ret == 0)
 		return (0);
 	else
-		return (1);
+		break ;
+	}
+	return (1);
+	//if (ret < 0)
+	//	return (-1);
+	//else if (ret == 0)
+//		return (0);
+//	else
+//		return (1);
 	//*line = copyuntil \n character.
 	//tmp = str;
 	//str = (strdup) str + \n location + 1

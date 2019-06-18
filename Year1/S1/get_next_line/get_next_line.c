@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/18 16:03:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/18 16:45:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int			get_next_line(const int fd, char **line)
 				extra = ft_strdup(str + 1 + i);
 				free(str);
 				str = extra;
-				free(extra);
+				tmp = extra;
 				printf("reeeeee");
 				//return (1);
 			}
@@ -97,7 +97,7 @@ int		main(void)
 	int		gnl_ret = 1;
 	int		fd;
 
-	fd = open("test.txt", O_RDONLY);
+	fd = open("test2.txt", O_RDONLY);
 	line = malloc(sizeof(char**));
 	while ((gnl_ret = get_next_line(fd, line)) > 0)
 	{

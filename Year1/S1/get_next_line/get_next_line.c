@@ -6,12 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/18 10:44:54 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/18 11:00:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include "libft/libft.h"
 
 // REMOVE ME vvv
 #include <fcntl.h>
@@ -26,6 +25,8 @@ int			get_next_line(const int fd. char **line)
 {
 	//TODO
 	int		ret;
+	char	buffer[BUFF_SIZE + 1];
+
 }
 
 // Declaring, allocating & passing an empty var **line to store lines found by gnl

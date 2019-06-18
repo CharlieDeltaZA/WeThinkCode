@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/18 09:19:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/18 10:12:53 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@
 
 // Passed empty pointer to a pointer for a string. This is reinitialised each time
 // Passed an fd that doesn't change.
+// Read the fd with read()
+//
 
 int			get_next_line(const int fd. char **line)
 {
 	//TODO
 }
 
-// Declaring, allocating & passing an empty var **line to store lines find by gnl
+// Declaring, allocating & passing an empty var **line to store lines found by gnl
 // Looping as long as gnl returns 1
 // opens file "test.txt" for read.
 

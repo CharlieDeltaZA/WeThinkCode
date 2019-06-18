@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/18 10:22:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/18 10:44:54 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 int			get_next_line(const int fd. char **line)
 {
 	//TODO
+	int		ret;
 }
 
 // Declaring, allocating & passing an empty var **line to store lines found by gnl

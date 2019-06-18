@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/18 13:37:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/18 16:03:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,28 +62,27 @@ int			get_next_line(const int fd, char **line)
 				free(str);
 				str = extra;
 				free(extra);
-				return (1);
+				printf("reeeeee");
+				//return (1);
 			}
 			else if (str[i] == '\0')
 			{
-			//	if (ret == BUFF_SIZE)
-			//		return (get_next_line(fd, line)); //?
+				if (ret == BUFF_SIZE)
+					return (get_next_line(fd, line)); //?
 				*line = ft_strdup(str);
-				return (1);
+				printf("REEE");
+				//return (1);
 			}
 			printf("REEE");
+			return (1);
+			//printf("REEE");
 		}
 	}
-	return (0);
-//	if (ret < 0)
-//	else if (ret == 0)
-//		return (0);
-//	else
-//		return (1);
-	//*line = copyuntil \n character.
-	//tmp = str;
-	//str = (strdup) str + \n location + 1
-	//free(tmp);
+		return (0);
+	// > *line = copyuntil \n character.
+	// > tmp = str;
+	// > str = (strdup) str + \n location + 1
+	// > free(tmp);
 	//printf("%s\n", str);
 	//return (0);
 }
@@ -91,14 +90,14 @@ int			get_next_line(const int fd, char **line)
 // Declaring, allocating & passing an empty var **line to store lines found by gnl
 // Looping as long as gnl returns 1
 // opens file "test.txt" for read.
-/*
+
 int		main(void)
 {
 	char	**line;
 	int		gnl_ret = 1;
 	int		fd;
 
-	fd = open("test2.txt", O_RDONLY);
+	fd = open("test.txt", O_RDONLY);
 	line = malloc(sizeof(char**));
 	while ((gnl_ret = get_next_line(fd, line)) > 0)
 	{
@@ -108,4 +107,4 @@ int		main(void)
 	close(fd);
 	printf("\nFIN :)\n");
 	return (0);
-}*/
+}

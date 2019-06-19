@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/19 08:38:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/19 09:31:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,17 @@ int			get_next_line(const int fd, char **line)
 	if (line == NULL)
 		return (-1);
 
-	str = ft_strdup("");
+	//str = ft_strdup("");
 	while ((ret = read(fd, buffer, BUFF_SIZE)))
 	{
+		if (str == NULL)
+			str = ft_strdup("");
 		buffer[ret] = '\0';
 		tmp = ft_strjoin(str, buffer);
 		free(str);
 		str = tmp;
 		//strchr
-		if (ft_strchr(buffer, '\n'))
+		if (ft_strchr(str, '\n'))
 		{
 			i = find_n(str);
 			if (str[i] == '\n')
@@ -62,7 +64,7 @@ int			get_next_line(const int fd, char **line)
 				free(str);
 				str = extra;
 				tmp = extra;
-				printf("reeeeee");
+	//		printf("reeeeee");
 				//return (1);
 			}
 			else if (str[i] == '\0')
@@ -70,10 +72,10 @@ int			get_next_line(const int fd, char **line)
 				if (ret == BUFF_SIZE)
 					return (get_next_line(fd, line)); //?
 				*line = ft_strdup(str);
-				printf("REEE");
+	//			printf("REEE");
 				//return (1);
 			}
-			printf("REEE");
+//			printf("REEE");
 			return (1);
 			//printf("REEE");
 		}

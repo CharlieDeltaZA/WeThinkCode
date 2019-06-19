@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/19 13:28:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/19 13:37:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ static size_t	find_n(char *str)
 	return (i);
 }
 
-static int		newline(const int fd, char **line, int ret, char *str, int i)
+static int		newline(const int fd, char **line, int ret, char *str)
 {
 	char	*extra;
+	size_t	i;
 
+	i = find_n(str);
 	if (str[i] == '\n')
 	{
 		*line = ft_strsub(str, 0, i);
@@ -59,8 +61,8 @@ int				get_next_line(const int fd, char **line)
 	char		buffer[BUFF_SIZE + 1];
 	static char *str;
 	char		*tmp;
-	char		*extra;
-	size_t		i;
+//	char		*extra;
+//	size_t		i;
 
 	if (line == NULL)
 		return (-1);
@@ -75,7 +77,7 @@ int				get_next_line(const int fd, char **line)
 		str = tmp;
 		if (ft_strchr(buffer, '\n'))
 		{
-			i = find_n(str);
+	//		i = find_n(str);
 			break ;
 			//return(newline(fd, line, ret, str, i));
 /*			if (str[i] == '\n')
@@ -100,7 +102,7 @@ int				get_next_line(const int fd, char **line)
 		return (-1);
 	else if (ret == 0)
 		return (0);
-	return (newline(fd, line, ret, str, i));
+	return (newline(fd, line, ret, str));
 	// > *line = copyuntil \n character.
 	// > tmp = str;
 	// > str = (strdup) str + \n location + 1

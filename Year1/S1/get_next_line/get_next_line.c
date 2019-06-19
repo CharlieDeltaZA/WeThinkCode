@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/18 16:45:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/19 08:38:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int			get_next_line(const int fd, char **line)
 // Declaring, allocating & passing an empty var **line to store lines found by gnl
 // Looping as long as gnl returns 1
 // opens file "test.txt" for read.
-
+/*
 int		main(void)
 {
 	char	**line;
@@ -107,4 +107,4 @@ int		main(void)
 	close(fd);
 	printf("\nFIN :)\n");
 	return (0);
-}
+}*/

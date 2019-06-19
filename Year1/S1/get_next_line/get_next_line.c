@@ -6,15 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/19 09:31:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/19 11:51:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-// REMOVE ME vvv
-#include <fcntl.h>
-#include <stdio.h>
 
 // Passed empty pointer to a pointer for a string. This is reinitialised each time
 // Passed an fd that doesn't change.
@@ -30,8 +26,31 @@ static size_t	find_n(char *str)
 		i++;
 	return (i);
 }
+/*
+static int		newline(const int fd, char **line, int ret, char *str, int i)
+{
+	char	*extra;
 
-int			get_next_line(const int fd, char **line)
+	if (str[i] == '\n')
+	{
+		*line = ft_strsub(str, 0, i);
+		extra = ft_strdup(str + 1 + i);
+		free(str);
+		str = extra;
+		//tmp = extra;
+		return (1);
+	}
+	else if (str[i] == '\0')
+	{
+		if (ret == BUFF_SIZE)
+			return (get_next_line(fd, line)); //?
+		*line = ft_strdup(str);
+		return (1);
+	}
+	return (0);
+}
+*/
+int				get_next_line(const int fd, char **line)
 {
 	//TODO
 	int			ret;
@@ -44,7 +63,6 @@ int			get_next_line(const int fd, char **line)
 	if (line == NULL)
 		return (-1);
 
-	//str = ft_strdup("");
 	while ((ret = read(fd, buffer, BUFF_SIZE)))
 	{
 		if (str == NULL)
@@ -53,31 +71,26 @@ int			get_next_line(const int fd, char **line)
 		tmp = ft_strjoin(str, buffer);
 		free(str);
 		str = tmp;
-		//strchr
 		if (ft_strchr(str, '\n'))
 		{
 			i = find_n(str);
+			//return(newline(fd, line, ret, str, i));
 			if (str[i] == '\n')
 			{
 				*line = ft_strsub(str, 0, i);
 				extra = ft_strdup(str + 1 + i);
 				free(str);
 				str = extra;
-				tmp = extra;
-	//		printf("reeeeee");
-				//return (1);
+				return (1);
 			}
 			else if (str[i] == '\0')
 			{
 				if (ret == BUFF_SIZE)
 					return (get_next_line(fd, line)); //?
 				*line = ft_strdup(str);
-	//			printf("REEE");
-				//return (1);
+				return (1);
 			}
-//			printf("REEE");
-			return (1);
-			//printf("REEE");
+	//		return (1);
 		}
 	}
 		return (0);
@@ -88,25 +101,3 @@ int			get_next_line(const int fd, char **line)
 	//printf("%s\n", str);
 	//return (0);
 }
-
-// Declaring, allocating & passing an empty var **line to store lines found by gnl
-// Looping as long as gnl returns 1
-// opens file "test.txt" for read.
-/*
-int		main(void)
-{
-	char	**line;
-	int		gnl_ret = 1;
-	int		fd;
-
-	fd = open("test2.txt", O_RDONLY);
-	line = malloc(sizeof(char**));
-	while ((gnl_ret = get_next_line(fd, line)) > 0)
-	{
-		printf("%s\n", *line);
-		free(*line);
-	}
-	close(fd);
-	printf("\nFIN :)\n");
-	return (0);
-}*/

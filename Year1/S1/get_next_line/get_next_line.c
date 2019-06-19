@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/19 14:46:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/19 15:12:29 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,4 @@ int				get_next_line(const int fd, char **line)
 	// > tmp = str;
 	// > str = (strdup) str + \n location + 1
 	// > free(tmp);
-	//printf("%s\n", str);
-	//return (0);
 }

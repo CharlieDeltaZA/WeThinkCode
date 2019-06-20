@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/20 11:24:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/20 11:32:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,20 @@ static int		newline(const int fd, char **line, int ret, char **str)
 	return (1);
 }
 
+static int		result(int ret, char **str, const int fd, char **line)
+{
+    if (ret < 0)
+        return (-1);
+    else if (ret == 0 && (str[fd] == NULL || str[fd] == '\0'))
+        return (0);
+    return (newline(fd, line, ret, str));
+}
+
 int				get_next_line(const int fd, char **line)
 {
 	int			ret;
 	char		buffer[BUFF_SIZE + 1];
-	static char *str[64];
+	static char *str[42];
 	char		*tmp;
 
 	if (fd < 0 || line == NULL || read(fd, buffer, 0))
@@ -73,9 +82,5 @@ int				get_next_line(const int fd, char **line)
 		if (ft_strchr(buffer, '\n'))
 			break ;
 	}
-	if (ret < 0)
-		return (-1);
-	else if (ret == 0 && (str[fd] == NULL || str[fd] == '\0'))
-		return (0);
-	return (newline(fd, line, ret, str));
+	return (result(ret, str, fd, line));
 }

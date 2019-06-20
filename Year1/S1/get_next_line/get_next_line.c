@@ -6,16 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/20 11:37:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/20 12:58:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-// Passed empty pointer to a pointer for a string. This is reinitialised each time
-// Passed an fd that doesn't change.
-// Read the fd with read()
-//
+/*
+** Finds the position of the newline char in the string that is passed to it
+*/
 
 static size_t	find_n(char **str, const int fd)
 {
@@ -26,6 +25,12 @@ static size_t	find_n(char **str, const int fd)
 		i++;
 	return (i);
 }
+
+/*
+** Takes the static var `str` and appends the string to `line` without the '\n'
+** char. Adds the overflow text to `extra` to temp hold the text before
+** reassigning it to static var `str` for use in the next loop.
+*/
 
 static int		newline(const int fd, char **line, int ret, char **str)
 {
@@ -52,6 +57,12 @@ static int		newline(const int fd, char **line, int ret, char **str)
 	return (1);
 }
 
+/*
+** Function to determine what number (-1, 0, 1) to pass back to the main
+** -1 for an error, 0 for completion of reading in GNL, 1 for a successful
+** read of a line. Calls newline func to perform its job of reading to line
+*/
+
 static int		result(int ret, char **str, const int fd, char **line)
 {
     if (ret < 0)
@@ -60,6 +71,15 @@ static int		result(int ret, char **str, const int fd, char **line)
         return (0);
     return (newline(fd, line, ret, str));
 }
+
+/*
+** ! Assumed `**line` will be initialized and freed by the main !
+** Multiple FDs supported. BUFF_SIZE chars are read from the FD, and assigned
+** to a temp variable, by joining `str` and `buffer`, before reassigning to
+** static var for safe-keeping. If a newline char is found in `buffer` during
+** the loop, we break out of the loop and call the newline function for
+** handling of assigning the "line" to `**line` for use in the main.
+*/
 
 int				get_next_line(const int fd, char **line)
 {

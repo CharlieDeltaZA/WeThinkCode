@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/19 15:12:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/20 10:58:00 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,39 +17,40 @@
 // Read the fd with read()
 //
 
-static size_t	find_n(char *str)
+static size_t	find_n(char **str, const int fd)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i] != '\n' && str[i] != '\0')
+	while (str[fd][i] != '\n' && str[fd][i] != '\0')
 		i++;
 	return (i);
 }
 
-static int		newline(const int fd, char **line, int ret, char *str)
+static int		newline(const int fd, char **line, int ret, char **str)
 {
 	char	*extra;
 	size_t	i;
 
-	i = find_n(str);
-	if (str[i] == '\n')
+//	i = 0;
+//	while (str[fd][i] != '\n' && str[fd][i] != '\0')
+//		i++;
+	i = find_n(str, fd);
+	if (str[fd][i] == '\n')
 	{
-		*line = ft_strsub(str, 0, i);
-		extra = ft_strdup(str + 1 + i);
-		free(str);
-		str = extra;
-		if (str[0] == '\0')
-			ft_strdel(&str);
-		//return (1);
+		*line = ft_strsub(str[fd], 0, i);
+		extra = ft_strdup(str[fd] + 1 + i);
+		free(str[fd]);
+		str[fd] = extra;
+		if (str[fd][0] == '\0')
+			ft_strdel(&str[fd]);
 	}
-	else if (str[i] == '\0')
+	else if (str[fd][i] == '\0')
 	{
 		if (ret == BUFF_SIZE)
 			return (get_next_line(fd, line)); //?
-		*line = ft_strdup(str);
-		ft_strdel(&str);
-		//return (1);
+		*line = ft_strdup(str[fd]);
+		ft_strdel(&str[fd]);
 	}
 	return (1);
 }
@@ -59,7 +60,7 @@ int				get_next_line(const int fd, char **line)
 	//TODO
 	int			ret;
 	char		buffer[BUFF_SIZE + 1];
-	static char *str;
+	static char *str[42];
 	char		*tmp;
 //	char		*extra;
 //	size_t		i;
@@ -69,42 +70,41 @@ int				get_next_line(const int fd, char **line)
 
 	while ((ret = read(fd, buffer, BUFF_SIZE)))
 	{
-		if (str == NULL)
-			str = ft_strdup("");
+		if (str[fd] == NULL)
+			str[fd] = ft_strdup("");
+//			str = ft_strnew(1);
 		buffer[ret] = '\0';
-		tmp = ft_strjoin(str, buffer);
-		free(str);
-		str = tmp;
+		tmp = ft_strjoin(str[fd], buffer);
+		free(str[fd]);
+		str[fd] = tmp;
 		if (ft_strchr(buffer, '\n'))
 		{
-	//		i = find_n(str);
+//			i = find_n(str, fd);
 			break ;
-			//return(newline(fd, line, ret, str, i));
-/*			if (str[i] == '\n')
+/*			if (str[fd][i] == '\n')
 			{
-				*line = ft_strsub(str, 0, i);
-				extra = ft_strdup(str + 1 + i);
-				free(str);
-				str = extra;
-	//			return (1);
+				*line = ft_strsub(str[fd], 0, i);
+				extra = ft_strdup(str[fd] + 1 + i);
+				free(str[fd]);
+				str[fd] = extra;
 			}
-			else if (str[i] == '\0')
+			else if (str[fd][i] == '\0')
 			{
 				if (ret == BUFF_SIZE)
 					return (get_next_line(fd, line)); //?
-				*line = ft_strdup(str);
-	//			return (1);
+				*line = ft_strdup(str[fd]);
 			} 
-			return (1);
-	*/	} 
+			return (1); */
+		} 
 	}
 	if (ret < 0)
 		return (-1);
-	else if (ret == 0)
+	else if (ret == 0 && (str[fd] == NULL || str[fd] == '\0'))
 		return (0);
 	return (newline(fd, line, ret, str));
-	// > *line = copyuntil \n character.
-	// > tmp = str;
-	// > str = (strdup) str + \n location + 1
-	// > free(tmp);
+//	return (1);
+													// > *line = copyuntil \n character.
+													// > tmp = str;
+													// > str = (strdup) str + \n location + 1
+													// > free(tmp);
 }

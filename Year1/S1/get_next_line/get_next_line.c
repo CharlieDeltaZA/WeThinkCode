@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/20 10:58:00 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/20 11:10:48 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,12 @@ int				get_next_line(const int fd, char **line)
 	//TODO
 	int			ret;
 	char		buffer[BUFF_SIZE + 1];
-	static char *str[42];
+	static char *str[64];
 	char		*tmp;
 //	char		*extra;
 //	size_t		i;
 
-	if (line == NULL)
+	if (fd < 0 || line == NULL)
 		return (-1);
 
 	while ((ret = read(fd, buffer, BUFF_SIZE)))

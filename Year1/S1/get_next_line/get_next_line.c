@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/20 12:58:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/24 08:57:36 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int		newline(const int fd, char **line, int ret, char **str)
 	else if (str[fd][i] == '\0')
 	{
 		if (ret == BUFF_SIZE)
-			return (get_next_line(fd, line)); //?
+			return (get_next_line(fd, line));
 		*line = ft_strdup(str[fd]);
 		ft_strdel(&str[fd]);
 	}
@@ -65,11 +65,11 @@ static int		newline(const int fd, char **line, int ret, char **str)
 
 static int		result(int ret, char **str, const int fd, char **line)
 {
-    if (ret < 0)
-        return (-1);
-    else if (ret == 0 && (str[fd] == NULL || str[fd] == '\0'))
-        return (0);
-    return (newline(fd, line, ret, str));
+	if (ret < 0)
+		return (-1);
+	else if (ret == 0 && (str[fd] == NULL || str[fd] == '\0'))
+		return (0);
+	return (newline(fd, line, ret, str));
 }
 
 /*
@@ -90,7 +90,6 @@ int				get_next_line(const int fd, char **line)
 
 	if (fd < 0 || line == NULL || read(fd, buffer, 0))
 		return (-1);
-
 	while ((ret = read(fd, buffer, BUFF_SIZE)))
 	{
 		if (str[fd] == NULL)

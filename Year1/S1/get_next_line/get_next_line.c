@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 08:27:38 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/06/24 08:57:36 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/06/24 11:44:02 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ static int		newline(const int fd, char **line, int ret, char **str)
 ** Function to determine what number (-1, 0, 1) to pass back to the main
 ** -1 for an error, 0 for completion of reading in GNL, 1 for a successful
 ** read of a line. Calls newline func to perform its job of reading to line
+** We are only assumed to be finished reading when the return value is 0 AND
+** the substring is at position '\0'
 */
 
 static int		result(int ret, char **str, const int fd, char **line)

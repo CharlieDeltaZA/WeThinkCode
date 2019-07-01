@@ -66,7 +66,8 @@ SRC = ft_atoi.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
-		ft_lstdelone.c
+		ft_lstdelone.c \
+		get_next_line.c
 
 all: $(NAME)
 

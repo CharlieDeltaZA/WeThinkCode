@@ -74,19 +74,20 @@ SRC = ft_atoi.c \
 		ft_putstr_col_fd.c \
 		ft_putendl_col_fd.c \
 		ft_putnbr_col_fd.c \
-		ft_str_is_numeric.c
+		ft_str_is_numeric.c \
+		ft_putnbr_nl.c
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) $(OPTIONS) $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@gcc $(FLAGS) $(OPTIONS) $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean:
-	/bin/rm -f $(OBJ)
+	@/bin/rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
